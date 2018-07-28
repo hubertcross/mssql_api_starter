@@ -15,6 +15,8 @@ const users = require('../db_apis/users.js');
 
 	console.log("context being sent to api: " + JSON.stringify(context));
 
+	return res.status(200).json({a: "b"});
+	/*
 	return users.find(context)
 		.then(function(rows) {
 			if(rows.length > 0) {
@@ -25,4 +27,5 @@ const users = require('../db_apis/users.js');
 			}
 		})
 		.catch(next);
+ 	*/
  }
